@@ -52,6 +52,11 @@ public class BakerySystem extends Application{
 
 		HBox sizeBox = new HBox(10, smallRadioButton, mediumRadioButton, largeRadioButton);
 		
+		
+		//Free delivery 
+		Label freeDeliveryLabel = new Label("Eligible for Free Delivery: ");
+		CheckBox freeDeliveryCheckBox = new CheckBox();
+		
 		//Save and Quit Buttons
 		Button saveButton = new Button("Save");
 		Button quitButton = new Button("Quit");
@@ -92,7 +97,10 @@ public class BakerySystem extends Application{
 		grid.add(sizeLabel, 0, 3);
 		grid.add(sizeBox, 1, 3);
 		
-		grid.add(buttonBox, 1, 4);
+		grid.add(freeDeliveryLabel, 0, 4);	
+		grid.add(freeDeliveryCheckBox, 1, 4);
+		
+		grid.add(buttonBox, 1, 5);
 		
 		
 		//Scene and stage setup
