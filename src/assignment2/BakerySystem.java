@@ -25,38 +25,59 @@ public class BakerySystem extends Application{
 		grid.setAlignment(Pos.CENTER);
 		
 		
+		//Name
 		Label nameLabel = new Label("Customer Name: ");
 		TextField nameField = new TextField();
 		
-		
+		//Phone Number
 		Label phoneNumberLabel = new Label("Customer Phone Number: ");
 		TextField phoneNumberField = new TextField();
 		
-		
-		Label cakeType = new Label("Cake Type Selected: ");
+		//Cake Type
+		Label cakeTypeLabel = new Label("Cake Type Selected: ");
 		ComboBox<String> cakeTypeComboBox = new ComboBox<>();
 		cakeTypeComboBox.getItems().addAll("Apple", "Carrot", "Cheesecake", "Chocolate", "Coffee", "Opera", "Tiramisu");
 		
-		
+		//Cake Size
 		Label sizeLabel = new Label("Cake Size: ");
 		ToggleGroup sizeGroup = new ToggleGroup();
 		
 		RadioButton smallRadioButton = new RadioButton("Small");
-		smallRadioButton.setToggleGroup(sizeGroup);
-		
 		RadioButton mediumRadioButton = new RadioButton("Medium");
-		mediumRadioButton.setToggleGroup(sizeGroup);
-		
 		RadioButton largeRadioButton = new RadioButton("Large");
-		largeRadioButton.setToggleGroup(sizeGroup);
 		
+		smallRadioButton.setToggleGroup(sizeGroup);
+		mediumRadioButton.setToggleGroup(sizeGroup);
+		largeRadioButton.setToggleGroup(sizeGroup);
+
 		HBox sizeBox = new HBox(10, smallRadioButton, mediumRadioButton, largeRadioButton);
 		
-		
+		//Save and Quit Buttons
 		Button saveButton = new Button("Save");
 		Button quitButton = new Button("Quit");
 		HBox buttonBox = new HBox(10, saveButton, quitButton);
-	
+		
+		
+		//adding elements to the grid
+		grid.add(nameLabel, 0, 0);
+		grid.add(nameField, 1, 0);
+		
+		grid.add(phoneNumberLabel, 0, 1);
+		grid.add(phoneNumberField, 1, 1);
+		
+		grid.add(cakeTypeLabel, 0, 2);
+		grid.add(cakeTypeComboBox, 1, 2);
+		
+		grid.add(sizeLabel, 0, 3);
+		grid.add(sizeBox, 1, 3);
+		
+		grid.add(buttonBox, 1, 4);
+		
+		
+		//Scene and stage setup
+		Scene scene = new Scene(grid, 450, 350);
+	    primaryStage.setScene(scene);
+	    primaryStage.show();
 		
 		
 	}
