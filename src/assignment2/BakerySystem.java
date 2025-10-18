@@ -56,6 +56,26 @@ public class BakerySystem extends Application{
 		Button saveButton = new Button("Save");
 		Button quitButton = new Button("Quit");
 		HBox buttonBox = new HBox(10, saveButton, quitButton);
+
+        // === Simple Event Handling ===
+        saveButton.setOnAction(e -> {
+            String name = nameField.getText();
+            String phone = phoneNumberField.getText();
+            String cake = cakeTypeComboBox.getValue();
+
+            RadioButton selectedSize = (RadioButton) sizeGroup.getSelectedToggle();
+            String size = (selectedSize != null) ? selectedSize.getText() : "";
+
+            OrderFileHandler.saveOrder(name, phone, cake, size, false);
+
+            nameField.clear();
+            phoneNumberField.clear();
+            cakeTypeComboBox.getSelectionModel().selectFirst();
+            sizeGroup.selectToggle(null);
+        });
+
+        quitButton.setOnAction(e -> System.exit(0));
+
 		
 		
 		//adding elements to the grid
