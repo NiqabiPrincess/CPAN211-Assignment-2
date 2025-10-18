@@ -28,25 +28,34 @@ public class BakerySystem extends Application{
 		Label nameLabel = new Label("Customer Name: ");
 		TextField nameField = new TextField();
 		
+		
 		Label phoneNumberLabel = new Label("Customer Phone Number: ");
 		TextField phoneNumberField = new TextField();
+		
 		
 		Label cakeType = new Label("Cake Type Selected: ");
 		ComboBox<String> cakeTypeComboBox = new ComboBox<>();
 		cakeTypeComboBox.getItems().addAll("Apple", "Carrot", "Cheesecake", "Chocolate", "Coffee", "Opera", "Tiramisu");
 		
+		
 		Label sizeLabel = new Label("Cake Size: ");
 		ToggleGroup sizeGroup = new ToggleGroup();
+		
 		RadioButton smallRadioButton = new RadioButton("Small");
 		smallRadioButton.setToggleGroup(sizeGroup);
+		
 		RadioButton mediumRadioButton = new RadioButton("Medium");
 		mediumRadioButton.setToggleGroup(sizeGroup);
+		
 		RadioButton largeRadioButton = new RadioButton("Large");
 		largeRadioButton.setToggleGroup(sizeGroup);
 		
-		Button saveButton = new Button("Save");
+		HBox sizeBox = new HBox(10, smallRadioButton, mediumRadioButton, largeRadioButton);
 		
+		
+		Button saveButton = new Button("Save");
 		Button quitButton = new Button("Quit");
+		HBox buttonBox = new HBox(10, saveButton, quitButton);
 	
 		
 		
