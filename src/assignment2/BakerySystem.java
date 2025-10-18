@@ -36,9 +36,13 @@ public class BakerySystem extends Application{
 		cakeTypeComboBox.getItems().addAll("Apple", "Carrot", "Cheesecake", "Chocolate", "Coffee", "Opera", "Tiramisu");
 		
 		Label sizeLabel = new Label("Cake Size: ");
+		ToggleGroup sizeGroup = new ToggleGroup();
 		RadioButton smallRadioButton = new RadioButton("Small");
+		smallRadioButton.setToggleGroup(sizeGroup);
 		RadioButton mediumRadioButton = new RadioButton("Medium");
+		mediumRadioButton.setToggleGroup(sizeGroup);
 		RadioButton largeRadioButton = new RadioButton("Large");
+		largeRadioButton.setToggleGroup(sizeGroup);
 		
 		Button saveButton = new Button("Save");
 		
