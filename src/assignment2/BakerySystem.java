@@ -99,6 +99,8 @@ public class BakerySystem extends Application{
 		Scene scene = new Scene(grid, 450, 350);
 		scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 		primaryStage.setScene(scene);
+		primaryStage.show();
+
 
 		
 		
