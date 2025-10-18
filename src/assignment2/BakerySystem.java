@@ -57,8 +57,8 @@ public class BakerySystem extends Application{
 		Button quitButton = new Button("Quit");
 		HBox buttonBox = new HBox(10, saveButton, quitButton);
 
-        // === Simple Event Handling ===
-        saveButton.setOnAction(e -> {
+        // Save Event Handling
+          saveButton.setOnAction(e -> {
             String name = nameField.getText();
             String phone = phoneNumberField.getText();
             String cake = cakeTypeComboBox.getValue();
@@ -66,6 +66,7 @@ public class BakerySystem extends Application{
             RadioButton selectedSize = (RadioButton) sizeGroup.getSelectedToggle();
             String size = (selectedSize != null) ? selectedSize.getText() : "";
 
+			// Write to Orders
             OrderFileHandler.saveOrder(name, phone, cake, size, false);
 
             nameField.clear();
@@ -73,7 +74,7 @@ public class BakerySystem extends Application{
             cakeTypeComboBox.getSelectionModel().selectFirst();
             sizeGroup.selectToggle(null);
         });
-
+		// Quit Event Handling
         quitButton.setOnAction(e -> System.exit(0));
 
 		
