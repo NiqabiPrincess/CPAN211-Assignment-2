@@ -1,0 +1,46 @@
+/* ===== style.css ===== */
+
+/* General window styling */
+.root {
+    -fx-background-color: #fdf6f0;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+/* TextFields */
+.text-field {
+    -fx-background-color: #fff;
+    -fx-border-color: #d1bfa7;
+    -fx-border-radius: 5;
+    -fx-padding: 5 8;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: #fffaf3;
+    -fx-border-color: #c89f75;
+}
+
+/* Radio Buttons */
+.radio-button {
+    -fx-font-size: 13px;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #d4a373;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 8 14;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #b07d4e;
+}
