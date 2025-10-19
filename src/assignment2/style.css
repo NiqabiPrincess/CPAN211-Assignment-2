@@ -1,46 +1,88 @@
-/* ===== style.css ===== */
-
 /* General window styling */
 .root {
-    -fx-background-color: #fdf6f0;
-    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #fff8f2;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
 }
 
 /* Labels */
 .label {
-    -fx-font-size: 14px;
-    -fx-text-fill: #333;
+    -fx-font-size: 15px;
+    -fx-text-fill: #5b3a29;
+    -fx-font-weight: bold;
 }
 
-/* TextFields */
+/* Text fields */
 .text-field {
-    -fx-background-color: #fff;
-    -fx-border-color: #d1bfa7;
-    -fx-border-radius: 5;
-    -fx-padding: 5 8;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0c6b4;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px;
+    -fx-pref-width: 240px;
+}
+
+.text-field:focused {
+    -fx-border-color: #d29b70;
+    -fx-background-color: #fff7f2;
 }
 
 /* ComboBox */
 .combo-box {
-    -fx-background-color: #fffaf3;
-    -fx-border-color: #c89f75;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0c6b4;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px;
+    -fx-pref-width: 240px;
 }
 
-/* Radio Buttons */
+.combo-box:focused {
+    -fx-border-color: #d29b70;
+}
+
+/* Radio buttons */
 .radio-button {
-    -fx-font-size: 13px;
+    -fx-text-fill: #5b3a29;
+    -fx-padding: 6px 0;
+    -fx-font-size: 14px;
 }
 
 /* Buttons */
 .button {
-    -fx-background-color: #d4a373;
-    -fx-text-fill: white;
+    -fx-background-color: #f4c89b;
+    -fx-text-fill: #3e2723;
     -fx-font-weight: bold;
-    -fx-background-radius: 6;
-    -fx-padding: 8 14;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px 18px;
     -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0.4, 0, 1);
 }
 
 .button:hover {
-    -fx-background-color: #b07d4e;
+    -fx-background-color: #ffddae;
+}
+
+.button:pressed {
+    -fx-background-color: #f1b87c;
+}
+
+/* Layout Containers */
+.grid-pane {
+    -fx-hgap: 20;
+    -fx-vgap: 15;
+    -fx-padding: 30 40 30 40; /* top, right, bottom, left */
+    -fx-background-color: transparent;
+}
+
+.hbox {
+    -fx-alignment: center;
+    -fx-spacing: 20;
+    -fx-padding: 20 0 0 0;
+}
+
+/* Optional: section separators for visual clarity */
+.titled-pane {
+    -fx-padding: 15 0;
 }
